@@ -1,0 +1,30 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: mississippi-blog-admin
+  profiles:
+    active: dev #默认dev环境
+  #  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#    time-zone: GMT+8
+#    serialization:
+#      write-dates-as-timestamps: true
+mybatis-plus:
+  global-config:
+    banner: false
+    db-config:
+      logic-delete-value: NOW()
+      logic-not-delete-value: 0
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+
+# sql打印日志
+logging:
+#  config: classpath:logback-spring.xml
+#  pattern:
+#    file: "[%-5level] [%date] [%class %method %line] [%thread] traceLogId:[%mdc{TRACE_LOG_ID}] %msg %n"
+#    console: "[%-5level] [%date] [%class %method %line] [%thread] traceLogId:[%mdc{TRACE_LOG_ID}] %msg %n"
+  level:
+    com.codergo.mississippi.blog.mapper: debug
+    com.codergo.mississippi.blog.controller: debug

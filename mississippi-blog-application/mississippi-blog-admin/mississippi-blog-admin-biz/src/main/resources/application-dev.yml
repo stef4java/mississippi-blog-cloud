@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mississippi_blog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root123456
+#    username: ENC(egN3vqBP80q3zLkYIzJjrA==)
+#    password: ENC(1yuljJGlrT49EuSOk+QZvGucLXjDLx/F)
+# jasypt加密的密匙
+jasypt:
+  encryptor:
+    password: FF&afRRh8&89wekjH
